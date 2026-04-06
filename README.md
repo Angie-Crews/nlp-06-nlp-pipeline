@@ -36,6 +36,38 @@ and intermediate artifacts are preserved for verification.
 This project demonstrates how to work with
 HTML data retrieved from web pages using a structured EVTL pipeline.
 
+
+## Phase 1: Start & Run — Status
+
+**Phase 1 has been completed successfully.**
+
+- The environment was set up using `uv` and all recommended extensions were installed.
+- Dependencies, including `spaCy` and the `en_core_web_sm` model, were installed via `uv sync`.
+- The pipeline was executed using:
+
+  ```shell
+  uv run python -m nlp.pipeline_web_html
+  ```
+
+- The pipeline ran to completion and printed:
+
+  ```text
+  ========================
+  Pipeline executed successfully!
+  ========================
+  ```
+
+- Artifacts created:
+  - `project.log` — confirms successful run
+  - `data/raw/case_raw.html` — dump of fetched HTML
+  - `data/processed/case_processed.csv` — final loaded result
+  - `data/processed/case_top_tokens.png` — bar chart of top tokens
+  - `data/processed/case_wordcloud.png` — word cloud visualization
+
+You can find example output and screenshots in the sections below.
+
+---
+
 The workflow:
 
 - Acquire HTML from an external web page
