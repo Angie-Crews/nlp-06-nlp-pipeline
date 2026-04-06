@@ -64,6 +64,21 @@ HTML data retrieved from web pages using a structured EVTL pipeline.
   - `data/processed/case_top_tokens.png` — bar chart of top tokens
   - `data/processed/case_wordcloud.png` — word cloud visualization
 
+
+## Phase 2: Change Authorship — Status
+
+**Phase 2 has been completed.**
+
+- Project authorship and links have been updated to reflect the new owner.
+- The following files were edited:
+  - `pyproject.toml`: updated project name, authorship, and metadata as needed.
+  - `zensical.toml`: updated site name, site URL, repo URL, and repo name to match the new GitHub repository and owner (e.g., Angie-Crews).
+- All documentation and configuration now reference the correct project and author.
+
+You can verify these changes in the headers of the respective files.
+
+---
+
 You can find example output and screenshots in the sections below.
 
 ---
@@ -220,7 +235,7 @@ open a machine terminal in your `Repos` folder:
 
 ```shell
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/nlp-06-nlp-pipeline
+git clone https://github.com/Angie-Crews/nlp-06-nlp-pipeline
 cd nlp-06-nlp-pipeline
 code .
 ```
