@@ -75,7 +75,19 @@ HTML data retrieved from web pages using a structured EVTL pipeline.
   - `zensical.toml`: updated site name, site URL, repo URL, and repo name to match the new GitHub repository and owner (e.g., Angie-Crews).
 - All documentation and configuration now reference the correct project and author.
 
+
 You can verify these changes in the headers of the respective files.
+
+## Phase 3: Read & Understand — Status
+
+**Phase 3 has been completed.**
+
+- The pipeline code and documentation have been carefully reviewed.
+- Key files and their roles in the EVTL workflow are now understood:
+  - Extraction, validation, transformation, analysis, and loading are modular and well-logged.
+  - The iterative nature of the Transform stage and the importance of data inspection and cleaning are clear.
+- Example code (such as the text cleaning function using spaCy) has been explored and explained.
+- The workflow, dependencies, and outputs are now familiar, providing a strong foundation for further customization and analysis.
 
 ---
 
