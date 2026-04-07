@@ -89,6 +89,37 @@ You can verify these changes in the headers of the respective files.
 - Example code (such as the text cleaning function using spaCy) has been explored and explained.
 - The workflow, dependencies, and outputs are now familiar, providing a strong foundation for further customization and analysis.
 
+## Phase 4: Make a Technical Modification — Status
+
+**Phase 4 has been completed.**
+
+- The example `_case` pipeline files were copied into a custom `angie` pipeline so the original example remains available.
+- A new derived feature set was added in the Transform stage:
+  - `sentence_count`
+  - `avg_sentence_length_words`
+  - `sentence_lengths`
+- A new visualization was added in the Analyze stage:
+  - `data/processed/angie_sentence_lengths.png` — histogram of words per sentence in the abstract
+- The custom pipeline writes separate outputs so the working example is preserved:
+  - `data/raw/angie_raw.html`
+  - `data/processed/angie_processed.csv`
+  - `data/processed/angie_top_tokens.png`
+  - `data/processed/angie_wordcloud.png`
+  - `data/processed/angie_sentence_lengths.png`
+- The custom phase-4 pipeline runs with:
+
+  ```shell
+  uv run python -m nlp.pipeline_web_html_angie
+  ```
+
+- Why this change was made:
+  - sentence-level metrics make the abstract analysis more substantive than a simple setting change
+  - the histogram provides a clear visual summary of how dense or uneven the writing is across sentences
+- What was observed after running the project:
+  - the pipeline still completes successfully
+  - the new CSV includes the additional sentence-level columns
+  - the new histogram adds a second perspective beyond token frequency and the word cloud
+
 ---
 
 You can find example output and screenshots in the sections below.
