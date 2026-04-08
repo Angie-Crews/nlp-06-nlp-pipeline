@@ -20,6 +20,9 @@ from nlp.config_angie import (
     RAW_HTML_PATH,
     RAW_PATH,
     ROOT_PATH,
+    SENTENCE_LENGTHS_PNG_PATH,
+    TOP_TOKENS_PNG_PATH,
+    WORDCLOUD_PNG_PATH,
 )
 from nlp.stage01_extract import run_extract
 from nlp.stage02_validate_angie import run_validate
@@ -62,6 +65,9 @@ def main() -> None:
     run_analyze(
         df=df,
         LOG=LOG,
+        top_tokens_path=TOP_TOKENS_PNG_PATH,
+        wordcloud_path=WORDCLOUD_PNG_PATH,
+        sentence_lengths_path=SENTENCE_LENGTHS_PNG_PATH,
     )
 
     run_load(

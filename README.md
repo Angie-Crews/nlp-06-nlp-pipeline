@@ -120,6 +120,42 @@ You can verify these changes in the headers of the respective files.
   - the new CSV includes the additional sentence-level columns
   - the new histogram adds a second perspective beyond token frequency and the word cloud
 
+## Phase 5: Apply the Skills to a New Problem — Status
+
+**Phase 5 has been completed.**
+
+- The custom `angie` pipeline was applied to a new arXiv paper:
+  - `https://arxiv.org/abs/1706.03762`
+  - *Attention Is All You Need*
+- The project continued to use `pandas` so the custom work stayed consistent with the starter pipeline and required minimal structural changes.
+- The custom application changed the input problem by targeting a different paper while preserving the EVTAL workflow and sentence-level analysis added in Phase 4.
+- The Phase 5 pipeline writes separate outputs so the earlier custom outputs remain available:
+  - `data/raw/angie_phase5_raw.html`
+  - `data/processed/angie_phase5_processed.csv`
+  - `data/processed/angie_phase5_top_tokens.png`
+  - `data/processed/angie_phase5_wordcloud.png`
+  - `data/processed/angie_phase5_sentence_lengths.png`
+- The custom pipeline was executed successfully with:
+
+  ```shell
+  uv run python -m nlp.pipeline_web_html_angie
+  ```
+
+- What was interesting about this application:
+  - the results shifted from the earlier security-focused paper to a foundational NLP paper centered on attention, translation, BLEU scores, and training efficiency
+  - the same pipeline structure was flexible enough to analyze a different paper without requiring a complete rewrite
+- What was observed after running the project:
+  - raw abstract words: `166`
+  - cleaned tokens: `99`
+  - unique tokens: `79`
+  - type-token ratio: `0.798`
+  - sentence count: `7`
+  - average sentence length: `24.14`
+- What insights were gained:
+  - the abstract is dense and technical, with one especially long sentence carrying a large amount of detail
+  - the token analysis highlights key themes such as `attention`, `translation`, `models`, `BLEU`, and `training`
+  - the sentence-length histogram complements token frequency by showing how technical ideas are distributed across the abstract
+
 ---
 
 You can find example output and screenshots in the sections below.

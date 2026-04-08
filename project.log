@@ -447,3 +447,261 @@
 2026-04-07 18:05:12 | INFO | CI | ========================
 2026-04-07 18:05:12 | INFO | CI | Pipeline executed successfully!
 2026-04-07 18:05:12 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | === RUN START ===
+2026-04-07 18:43:03 | INFO | CI | project=Module 6: EVTAL PIPELINE - WEB DOCUMENTS (HTML) - ANGIE
+2026-04-07 18:43:03 | INFO | CI | repo_dir=nlp-06-nlp-pipeline
+2026-04-07 18:43:03 | INFO | CI | python=3.14.3
+2026-04-07 18:43:03 | INFO | CI | os=Windows 11
+2026-04-07 18:43:03 | INFO | CI | shell=powershell
+2026-04-07 18:43:03 | INFO | CI | cwd=.
+2026-04-07 18:43:03 | INFO | CI | github_actions=False
+2026-04-07 18:43:03 | INFO | CI | START PIPELINE
+2026-04-07 18:43:03 | INFO | CI | ROOT_PATH = .
+2026-04-07 18:43:03 | INFO | CI | DATA_PATH = data
+2026-04-07 18:43:03 | INFO | CI | RAW_PATH = data\raw
+2026-04-07 18:43:03 | INFO | CI | PROCESSED_PATH = data\processed
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | EXTRACT: Fetching HTML from https://arxiv.org/abs/1706.03762
+2026-04-07 18:43:03 | INFO | CI | SOURCE URL = https://arxiv.org/abs/1706.03762
+2026-04-07 18:43:03 | INFO | CI | SINK PATH = data\raw\angie_phase5_raw.html
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | HTML STRUCTURE INSPECTION:
+2026-04-07 18:43:03 | INFO | CI | Top-level type: BeautifulSoup
+2026-04-07 18:43:03 | INFO | CI | Top-level elements: ['html']
+2026-04-07 18:43:03 | INFO | CI | VALIDATE: Title found: True
+2026-04-07 18:43:03 | INFO | CI | VALIDATE: Authors found: True
+2026-04-07 18:43:03 | INFO | CI | VALIDATE: Abstract found: True
+2026-04-07 18:43:03 | INFO | CI | VALIDATE: Subjects found: True
+2026-04-07 18:43:03 | INFO | CI | VALIDATE: Dateline found: True
+2026-04-07 18:43:03 | INFO | CI | VALIDATE: HTML structure is valid.
+2026-04-07 18:43:03 | INFO | CI | Sink: validated BeautifulSoup object
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | Extracting metadata from HTML
+2026-04-07 18:43:03 | INFO | CI | ------------------------
+2026-04-07 18:43:03 | INFO | CI | Project specific: Extract title, authors, abstract
+2026-04-07 18:43:03 | INFO | CI | ------------------------
+2026-04-07 18:43:03 | INFO | CI | Extracted title: Attention Is All You Need
+2026-04-07 18:43:03 | INFO | CI | Extracted authors: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin
+2026-04-07 18:43:03 | INFO | CI | Extracted abstract: The dominant sequence transduction models are based on complex recurrent or convolutional neural net...
+2026-04-07 18:43:03 | INFO | CI | ------------------------
+2026-04-07 18:43:03 | INFO | CI | Project specific: Extract subjects from subheader
+2026-04-07 18:43:03 | INFO | CI | ------------------------
+2026-04-07 18:43:03 | INFO | CI | Extracted subjects: Computer Science > Computation and Language
+2026-04-07 18:43:03 | INFO | CI | ------------------------
+2026-04-07 18:43:03 | INFO | CI | Project specific: Extract submission date from dateline
+2026-04-07 18:43:03 | INFO | CI | ------------------------
+2026-04-07 18:43:03 | INFO | CI | Extracted submission date: [Submitted on 12 Jun 2017 (v1), last revised 2 Aug 2023 (this version, v7)]
+2026-04-07 18:43:03 | INFO | CI | ------------------------
+2026-04-07 18:43:03 | INFO | CI | Project specific: Extract arxiv_id from canonical link
+2026-04-07 18:43:03 | INFO | CI | ------------------------
+2026-04-07 18:43:03 | INFO | CI | Extracted arxiv_id: 1706.03762
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | PHASE 3.2: Clean and normalize text fields
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI |   abstract (raw):   The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-...
+2026-04-07 18:43:03 | INFO | CI |   abstract (clean): dominant sequence transduction models based complex recurrent convolutional neural networks encoderdecoder configuration...
+2026-04-07 18:43:03 | INFO | CI |   characters removed: 293 (25.8%)
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | PHASE 3.3: Engineer derived features
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI |   abstract_word_count: 166
+2026-04-07 18:43:03 | INFO | CI |   author_count:        8
+2026-04-07 18:43:03 | INFO | CI |   token_count:         99
+2026-04-07 18:43:03 | INFO | CI |   unique_token_count:  79
+2026-04-07 18:43:03 | INFO | CI |   type_token_ratio:    0.798
+2026-04-07 18:43:03 | INFO | CI |   sentence_count:      7
+2026-04-07 18:43:03 | INFO | CI |   avg_sentence_words:  24.14
+2026-04-07 18:43:03 | INFO | CI |   sentence_lengths:    [19, 14, 20, 25, 23, 43, 25]
+2026-04-07 18:43:03 | INFO | CI |   top 10 tokens:       ['dominant', 'sequence', 'transduction', 'models', 'based', 'complex', 'recurrent', 'convolutional', 'neural', 'networks']
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | PHASE 3.4: Build record and create DataFrame
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | Created DataFrame with 1 row and 16 columns
+2026-04-07 18:43:03 | INFO | CI | Columns: ['arxiv_id', 'title', 'authors', 'subjects', 'submitted', 'abstract_raw', 'abstract_clean', 'tokens', 'abstract_word_count', 'token_count', 'unique_token_count', 'type_token_ratio', 'author_count', 'sentence_count', 'avg_sentence_length_words', 'sentence_lengths']
+2026-04-07 18:43:03 | INFO | CI |   DF preview:
+     arxiv_id  ... avg_sentence_length_words
+0  1706.03762  ...                     24.14
+
+[1 rows x 5 columns]
+2026-04-07 18:43:03 | INFO | CI | Sink: Pandas DataFrame created
+2026-04-07 18:43:03 | INFO | CI | Transformation complete.
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI | STAGE 04: ANALYZE starting...
+2026-04-07 18:43:03 | INFO | CI | ========================
+2026-04-07 18:43:03 | INFO | CI |   Paper: Attention Is All You Need
+2026-04-07 18:43:03 | INFO | CI |   Abstract word count (raw):    166
+2026-04-07 18:43:03 | INFO | CI |   Token count (clean):          99
+2026-04-07 18:43:03 | INFO | CI |   Unique token count:           79
+2026-04-07 18:43:03 | INFO | CI |   Type-token ratio:             0.798
+2026-04-07 18:43:03 | INFO | CI |   Author count:                 8
+2026-04-07 18:43:03 | INFO | CI |   Sentence count:               7
+2026-04-07 18:43:03 | INFO | CI |   Avg sentence length:          24.14
+2026-04-07 18:43:04 | INFO | CI |   Saved bar chart to C:\Repos\nlp-06-nlp-pipeline\data\processed\angie_phase5_top_tokens.png
+2026-04-07 18:43:04 | INFO | CI |   Saved word cloud to C:\Repos\nlp-06-nlp-pipeline\data\processed\angie_phase5_wordcloud.png
+2026-04-07 18:43:04 | INFO | CI |   Saved sentence-length histogram to C:\Repos\nlp-06-nlp-pipeline\data\processed\angie_phase5_sentence_lengths.png
+2026-04-07 18:43:04 | INFO | CI |   Top 20 tokens by frequency:
+2026-04-07 18:43:04 | INFO | CI |       1. models                         4
+2026-04-07 18:43:04 | INFO | CI |       2. best                           3
+2026-04-07 18:43:04 | INFO | CI |       3. translation                    3
+2026-04-07 18:43:04 | INFO | CI |       4. bleu                           3
+2026-04-07 18:43:04 | INFO | CI |       5. training                       3
+2026-04-07 18:43:04 | INFO | CI |       6. based                          2
+2026-04-07 18:43:04 | INFO | CI |       7. attention                      2
+2026-04-07 18:43:04 | INFO | CI |       8. new                            2
+2026-04-07 18:43:04 | INFO | CI |       9. transformer                    2
+2026-04-07 18:43:04 | INFO | CI |      10. tasks                          2
+2026-04-07 18:43:04 | INFO | CI |      11. model                          2
+2026-04-07 18:43:04 | INFO | CI |      12. wmt                            2
+2026-04-07 18:43:04 | INFO | CI |      13. 2014                           2
+2026-04-07 18:43:04 | INFO | CI |      14. task                           2
+2026-04-07 18:43:04 | INFO | CI |      15. dominant                       1
+2026-04-07 18:43:04 | INFO | CI |      16. sequence                       1
+2026-04-07 18:43:04 | INFO | CI |      17. transduction                   1
+2026-04-07 18:43:04 | INFO | CI |      18. complex                        1
+2026-04-07 18:43:04 | INFO | CI |      19. recurrent                      1
+2026-04-07 18:43:04 | INFO | CI |      20. convolutional                  1
+2026-04-07 18:43:04 | INFO | CI |   Sentence lengths (words):     [19, 14, 20, 25, 23, 43, 25]
+2026-04-07 18:43:04 | INFO | CI | Sink: visualizations saved to data/processed/
+2026-04-07 18:43:04 | INFO | CI | Analysis complete.
+2026-04-07 18:43:04 | INFO | CI | ========================
+2026-04-07 18:43:04 | INFO | CI | STAGE 04: LOAD starting...
+2026-04-07 18:43:04 | INFO | CI | ========================
+2026-04-07 18:43:04 | INFO | CI | SINK PATH = data\processed\angie_phase5_processed.csv
+2026-04-07 18:43:04 | INFO | CI | ========================
+2026-04-07 18:43:04 | INFO | CI | Pipeline executed successfully!
+2026-04-07 18:43:04 | INFO | CI | ========================
+2026-04-07 18:54:37 | INFO | CI | === RUN START ===
+2026-04-07 18:54:37 | INFO | CI | project=Module 6: EVTAL PIPELINE - WEB DOCUMENTS (HTML) - ANGIE
+2026-04-07 18:54:37 | INFO | CI | repo_dir=nlp-06-nlp-pipeline
+2026-04-07 18:54:37 | INFO | CI | python=3.14.3
+2026-04-07 18:54:37 | INFO | CI | os=Windows 11
+2026-04-07 18:54:37 | INFO | CI | shell=powershell
+2026-04-07 18:54:37 | INFO | CI | cwd=.
+2026-04-07 18:54:37 | INFO | CI | github_actions=False
+2026-04-07 18:54:37 | INFO | CI | START PIPELINE
+2026-04-07 18:54:37 | INFO | CI | ROOT_PATH = .
+2026-04-07 18:54:37 | INFO | CI | DATA_PATH = data
+2026-04-07 18:54:37 | INFO | CI | RAW_PATH = data\raw
+2026-04-07 18:54:37 | INFO | CI | PROCESSED_PATH = data\processed
+2026-04-07 18:54:37 | INFO | CI | ========================
+2026-04-07 18:54:37 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-04-07 18:54:37 | INFO | CI | ========================
+2026-04-07 18:54:37 | INFO | CI | EXTRACT: Fetching HTML from https://arxiv.org/abs/1706.03762
+2026-04-07 18:54:38 | INFO | CI | SOURCE URL = https://arxiv.org/abs/1706.03762
+2026-04-07 18:54:38 | INFO | CI | SINK PATH = data\raw\angie_phase5_raw.html
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | HTML STRUCTURE INSPECTION:
+2026-04-07 18:54:38 | INFO | CI | Top-level type: BeautifulSoup
+2026-04-07 18:54:38 | INFO | CI | Top-level elements: ['html']
+2026-04-07 18:54:38 | INFO | CI | VALIDATE: Title found: True
+2026-04-07 18:54:38 | INFO | CI | VALIDATE: Authors found: True
+2026-04-07 18:54:38 | INFO | CI | VALIDATE: Abstract found: True
+2026-04-07 18:54:38 | INFO | CI | VALIDATE: Subjects found: True
+2026-04-07 18:54:38 | INFO | CI | VALIDATE: Dateline found: True
+2026-04-07 18:54:38 | INFO | CI | VALIDATE: HTML structure is valid.
+2026-04-07 18:54:38 | INFO | CI | Sink: validated BeautifulSoup object
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | Extracting metadata from HTML
+2026-04-07 18:54:38 | INFO | CI | ------------------------
+2026-04-07 18:54:38 | INFO | CI | Project specific: Extract title, authors, abstract
+2026-04-07 18:54:38 | INFO | CI | ------------------------
+2026-04-07 18:54:38 | INFO | CI | Extracted title: Attention Is All You Need
+2026-04-07 18:54:38 | INFO | CI | Extracted authors: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin
+2026-04-07 18:54:38 | INFO | CI | Extracted abstract: The dominant sequence transduction models are based on complex recurrent or convolutional neural net...
+2026-04-07 18:54:38 | INFO | CI | ------------------------
+2026-04-07 18:54:38 | INFO | CI | Project specific: Extract subjects from subheader
+2026-04-07 18:54:38 | INFO | CI | ------------------------
+2026-04-07 18:54:38 | INFO | CI | Extracted subjects: Computer Science > Computation and Language
+2026-04-07 18:54:38 | INFO | CI | ------------------------
+2026-04-07 18:54:38 | INFO | CI | Project specific: Extract submission date from dateline
+2026-04-07 18:54:38 | INFO | CI | ------------------------
+2026-04-07 18:54:38 | INFO | CI | Extracted submission date: [Submitted on 12 Jun 2017 (v1), last revised 2 Aug 2023 (this version, v7)]
+2026-04-07 18:54:38 | INFO | CI | ------------------------
+2026-04-07 18:54:38 | INFO | CI | Project specific: Extract arxiv_id from canonical link
+2026-04-07 18:54:38 | INFO | CI | ------------------------
+2026-04-07 18:54:38 | INFO | CI | Extracted arxiv_id: 1706.03762
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | PHASE 3.2: Clean and normalize text fields
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI |   abstract (raw):   The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-...
+2026-04-07 18:54:38 | INFO | CI |   abstract (clean): dominant sequence transduction models based complex recurrent convolutional neural networks encoderdecoder configuration...
+2026-04-07 18:54:38 | INFO | CI |   characters removed: 293 (25.8%)
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | PHASE 3.3: Engineer derived features
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI |   abstract_word_count: 166
+2026-04-07 18:54:38 | INFO | CI |   author_count:        8
+2026-04-07 18:54:38 | INFO | CI |   token_count:         99
+2026-04-07 18:54:38 | INFO | CI |   unique_token_count:  79
+2026-04-07 18:54:38 | INFO | CI |   type_token_ratio:    0.798
+2026-04-07 18:54:38 | INFO | CI |   sentence_count:      7
+2026-04-07 18:54:38 | INFO | CI |   avg_sentence_words:  24.14
+2026-04-07 18:54:38 | INFO | CI |   sentence_lengths:    [19, 14, 20, 25, 23, 43, 25]
+2026-04-07 18:54:38 | INFO | CI |   top 10 tokens:       ['dominant', 'sequence', 'transduction', 'models', 'based', 'complex', 'recurrent', 'convolutional', 'neural', 'networks']
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | PHASE 3.4: Build record and create DataFrame
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | Created DataFrame with 1 row and 16 columns
+2026-04-07 18:54:38 | INFO | CI | Columns: ['arxiv_id', 'title', 'authors', 'subjects', 'submitted', 'abstract_raw', 'abstract_clean', 'tokens', 'abstract_word_count', 'token_count', 'unique_token_count', 'type_token_ratio', 'author_count', 'sentence_count', 'avg_sentence_length_words', 'sentence_lengths']
+2026-04-07 18:54:38 | INFO | CI |   DF preview:
+     arxiv_id  ... avg_sentence_length_words
+0  1706.03762  ...                     24.14
+
+[1 rows x 5 columns]
+2026-04-07 18:54:38 | INFO | CI | Sink: Pandas DataFrame created
+2026-04-07 18:54:38 | INFO | CI | Transformation complete.
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | STAGE 04: ANALYZE starting...
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI |   Paper: Attention Is All You Need
+2026-04-07 18:54:38 | INFO | CI |   Abstract word count (raw):    166
+2026-04-07 18:54:38 | INFO | CI |   Token count (clean):          99
+2026-04-07 18:54:38 | INFO | CI |   Unique token count:           79
+2026-04-07 18:54:38 | INFO | CI |   Type-token ratio:             0.798
+2026-04-07 18:54:38 | INFO | CI |   Author count:                 8
+2026-04-07 18:54:38 | INFO | CI |   Sentence count:               7
+2026-04-07 18:54:38 | INFO | CI |   Avg sentence length:          24.14
+2026-04-07 18:54:38 | INFO | CI |   Saved bar chart to C:\Repos\nlp-06-nlp-pipeline\data\processed\angie_phase5_top_tokens.png
+2026-04-07 18:54:38 | INFO | CI |   Saved word cloud to C:\Repos\nlp-06-nlp-pipeline\data\processed\angie_phase5_wordcloud.png
+2026-04-07 18:54:38 | INFO | CI |   Saved sentence-length histogram to C:\Repos\nlp-06-nlp-pipeline\data\processed\angie_phase5_sentence_lengths.png
+2026-04-07 18:54:38 | INFO | CI |   Top 20 tokens by frequency:
+2026-04-07 18:54:38 | INFO | CI |       1. models                         4
+2026-04-07 18:54:38 | INFO | CI |       2. best                           3
+2026-04-07 18:54:38 | INFO | CI |       3. translation                    3
+2026-04-07 18:54:38 | INFO | CI |       4. bleu                           3
+2026-04-07 18:54:38 | INFO | CI |       5. training                       3
+2026-04-07 18:54:38 | INFO | CI |       6. based                          2
+2026-04-07 18:54:38 | INFO | CI |       7. attention                      2
+2026-04-07 18:54:38 | INFO | CI |       8. new                            2
+2026-04-07 18:54:38 | INFO | CI |       9. transformer                    2
+2026-04-07 18:54:38 | INFO | CI |      10. tasks                          2
+2026-04-07 18:54:38 | INFO | CI |      11. model                          2
+2026-04-07 18:54:38 | INFO | CI |      12. wmt                            2
+2026-04-07 18:54:38 | INFO | CI |      13. 2014                           2
+2026-04-07 18:54:38 | INFO | CI |      14. task                           2
+2026-04-07 18:54:38 | INFO | CI |      15. dominant                       1
+2026-04-07 18:54:38 | INFO | CI |      16. sequence                       1
+2026-04-07 18:54:38 | INFO | CI |      17. transduction                   1
+2026-04-07 18:54:38 | INFO | CI |      18. complex                        1
+2026-04-07 18:54:38 | INFO | CI |      19. recurrent                      1
+2026-04-07 18:54:38 | INFO | CI |      20. convolutional                  1
+2026-04-07 18:54:38 | INFO | CI |   Sentence lengths (words):     [19, 14, 20, 25, 23, 43, 25]
+2026-04-07 18:54:38 | INFO | CI | Sink: visualizations saved to data/processed/
+2026-04-07 18:54:38 | INFO | CI | Analysis complete.
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | STAGE 04: LOAD starting...
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | SINK PATH = data\processed\angie_phase5_processed.csv
+2026-04-07 18:54:38 | INFO | CI | ========================
+2026-04-07 18:54:38 | INFO | CI | Pipeline executed successfully!
+2026-04-07 18:54:38 | INFO | CI | ========================

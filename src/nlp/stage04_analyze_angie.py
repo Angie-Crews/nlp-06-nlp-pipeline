@@ -103,6 +103,9 @@ def run_analyze(
     df: pd.DataFrame,
     LOG: logging.Logger,
     output_dir: Path = Path("data/processed"),
+    top_tokens_path: Path | None = None,
+    wordcloud_path: Path | None = None,
+    sentence_lengths_path: Path | None = None,
     top_n: int = 20,
 ) -> None:
     """Analyze the transformed DataFrame and produce visualizations."""
@@ -139,24 +142,30 @@ def run_analyze(
     LOG.info(f"  Sentence count:               {sentence_count}")
     LOG.info(f"  Avg sentence length:          {avg_sentence_length_words}")
 
+    top_tokens_output = top_tokens_path or output_dir / "angie_top_tokens.png"
+    wordcloud_output = wordcloud_path or output_dir / "angie_wordcloud.png"
+    sentence_lengths_output = (
+        sentence_lengths_path or output_dir / "angie_sentence_lengths.png"
+    )
+
     _plot_top_tokens(
         tokens=tokens,
         top_n=top_n,
-        output_path=output_dir / "angie_top_tokens.png",
+        output_path=top_tokens_output,
         title=f"Top {top_n} Tokens: {title}",
         LOG=LOG,
     )
 
     _plot_wordcloud(
         text=tokens_str,
-        output_path=output_dir / "angie_wordcloud.png",
+        output_path=wordcloud_output,
         title=f"Word Cloud: {title}",
         LOG=LOG,
     )
 
     _plot_sentence_length_histogram(
         sentence_lengths=sentence_lengths,
-        output_path=output_dir / "angie_sentence_lengths.png",
+        output_path=sentence_lengths_output,
         title=f"Sentence Lengths: {title}",
         LOG=LOG,
     )
