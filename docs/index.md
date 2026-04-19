@@ -16,6 +16,7 @@ to get these projects running on your machine.
 - **Home** - this documentation landing page
 - **cc6.2 Set up & Verify** - summary of environment setup, configuration, and initial pipeline verification
 - **cc6.4 Custom Project & Engage** - summary of the Phase 4 custom modification and results
+- **NLP Portfolio** - professional summary of techniques, pipeline design, outputs, and project links
 - **NLP Evolution** - a relatively concise discussion of NLP evolution
 - **Project Instructions** - instructions specific to this module
 - **Glossary** - project terms and concepts
